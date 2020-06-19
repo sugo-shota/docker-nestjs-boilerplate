@@ -1,0 +1,14 @@
+version: '3'
+services: 
+    api:
+        build: 
+            context: .
+            dockerfile: Dockerfile-dev
+        volumes: 
+            - ./:/application/
+        ports: 
+            - 3000:3000
+        env_file: 
+            - .env
+        environment: 
+            - ENV=dev

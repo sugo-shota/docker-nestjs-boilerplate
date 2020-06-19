@@ -1,0 +1,8 @@
+FROM node:12-alpine
+
+RUN npm i -g @nestjs/cli
+WORKDIR /application
+
+EXPOSE 3000
+
+CMD ["npm", "run", "start:debug"]
